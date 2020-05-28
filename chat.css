@@ -1,0 +1,96 @@
+@import url(https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap:750);
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: {background_color};
+    font-family: 'Press Start 2P';
+    font-weight: 750;
+    font-size: {font_size};
+    line-height: 1.5em;
+    color: {text_color};
+}
+
+#log>div {
+    animation: fadeInRight .3s ease forwards, fadeOut 0.5s ease {message_hide_delay} forwards;
+    -webkit-animation: fadeInRight .3s ease forwards, fadeOut 0.5s ease {message_hide_delay} forwards;
+}
+
+.colon {
+    display: none;
+}
+
+#log {
+    display: table;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 10px 10px;
+    width: 100%;
+    table-layout: fixed;
+}
+
+#log>div {
+    display: table-row;
+}
+
+#log>div.deleted {
+    visibility: hidden;
+}
+
+#log .emote {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding: 0.4em 0.2em;
+    position: relative;
+    top: -0.1em;
+}
+
+#log .emote img {
+    display: inline-block;
+    height: 1em;
+    opacity: 0;
+}
+
+#log .message,#log .meta {
+    vertical-align: top;
+    display: table-row;
+    padding-bottom: 0.1em;
+}
+
+#log .meta {
+    width: 35%;
+    text-align: right;
+    padding-right: 0.5em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#log .message {
+  	margin-left: 0.5em;
+    word-wrap: break-word;
+    width: 65%;
+}
+
+.badge {
+    margin-right: 0.5em;
+    position: relative;
+  	float: left;
+    height: 1em;
+    vertical-align: text-bottom;
+}
+
+.name {
+    text-shadow: 0 0 1px #000, 0 0 2px #000;
+  	text-align: left;
+  	float: left;
+}
